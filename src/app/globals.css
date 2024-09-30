@@ -63,10 +63,11 @@ body {
   }
   @media (max-width: 932px) {
     .svg-image {
-      width: 80px;
-      height: 80px;
-      top: -2rem;
-      left: 42%;
+      display: none;
+      /* width: 80px; */
+      /* height: 80px; */
+      /* top: -2.0rem; */
+      /* left: 42%; */
     }
     .not-found-container{
       .not-found-message{
