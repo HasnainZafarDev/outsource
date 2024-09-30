@@ -21,13 +21,6 @@ const ContactBottom = () => {
   };
   return (
     <div className="contact-bottom-section">
-      {/* <Image
-        src="/myImage.svg"
-        height={150}
-        width={150}
-        className="svg-image"
-        alt="svg"
-      /> */}
       <CustomShapeIcon className="svg-image"/>
       <motion.div
         className="card"

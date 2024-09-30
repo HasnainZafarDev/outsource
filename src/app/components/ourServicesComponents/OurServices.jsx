@@ -12,8 +12,10 @@ import { IoChatbubblesOutline } from "react-icons/io5";
 import "./ourServices.css";
 import { useInView } from "react-intersection-observer";
 import { delay, motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const OurServices = () => {
+  const router = useRouter();
   const createServicesVariants = (delay) => ({
     hidden: { opacity: 0, y: 100 },
     visible: {
@@ -26,7 +28,9 @@ const OurServices = () => {
       },
     },
   });
-  2;
+  const handleNavigation = (link) => {
+    router.push(link);
+  };
   const services = [
     {
       id: 1,
@@ -34,6 +38,7 @@ const OurServices = () => {
       description:
         "Streamline your transportation needs with our advanced booking and dispatching solutions.",
       icon: <FaTaxi />,
+      link: "/ourservices/taxibookingservices",
     },
     {
       id: 2,
@@ -41,6 +46,7 @@ const OurServices = () => {
       description:
         "Optimize your operations with our professional outsourcing services.",
       icon: <FaBroadcastTower />,
+      link: "/ourservices/outsourcingservices",
     },
     {
       id: 3,
@@ -48,6 +54,7 @@ const OurServices = () => {
       description:
         "Find the best remote talent to enhance your business efficiency.",
       icon: <HiUserGroup />,
+      link: "/ourservices/career",
     },
     {
       id: 4,
@@ -55,6 +62,7 @@ const OurServices = () => {
       description:
         "Ensure exceptional customer experiences with our dedicated support team..",
       icon: <FaHeadphones />,
+      link: "/ourservices/customersupport",
     },
     {
       id: 5,
@@ -62,6 +70,7 @@ const OurServices = () => {
       description:
         "Professional and timely email handling to keep your clients satisfied.",
       icon: <FaMailBulk />,
+      link: "/ourservices/emailsupport",
     },
     {
       id: 6,
@@ -69,6 +78,7 @@ const OurServices = () => {
       description:
         "Real-time chat support to engage and assist your website visitors",
       icon: <IoChatbubblesOutline />,
+      link: "/ourservices/livechatsupport",
     },
   ];
 
@@ -91,7 +101,10 @@ const OurServices = () => {
             </div>
             <h3 className="card-title">{service.title}</h3>
             <p>{service.description}</p>
-            <div className="arrow-circle">
+            <div
+              className="arrow-circle"
+              onClick={() => handleNavigation(service.link)}
+            >
               <FaAngleRight className="arrow-icon" />
             </div>
           </motion.div>

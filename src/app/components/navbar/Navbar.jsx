@@ -64,12 +64,24 @@ const Navbar = () => {
           </Link>
           <div className="services-dropdown-content">
             <div className="buyservices-dropdown-content">
-              <Link href="/buyservices/service1" onClick={toggleMenu}>Taxi Booking Services</Link>
-              <Link href="/buyservices/service2" onClick={toggleMenu}>Customer Services</Link>
-              <Link href="/buyservices/service2" onClick={toggleMenu}>Outsourcing Services</Link>
-              <Link href="/buyservices/service3" onClick={toggleMenu}>Live Chat Support</Link>
-              <Link href="/buyservices/service3" onClick={toggleMenu}>Email Support Services</Link>
-              <Link href="/buyservices/service3" onClick={toggleMenu}>Remote Staff Hiring</Link>
+              <Link href="/buyservices/service1" onClick={toggleMenu}>
+                Taxi Booking Services
+              </Link>
+              <Link href="/buyservices/service2" onClick={toggleMenu}>
+                Customer Services
+              </Link>
+              <Link href="/buyservices/service2" onClick={toggleMenu}>
+                Outsourcing Services
+              </Link>
+              <Link href="/buyservices/service3" onClick={toggleMenu}>
+                Live Chat Support
+              </Link>
+              <Link href="/buyservices/service3" onClick={toggleMenu}>
+                Email Support Services
+              </Link>
+              <Link href="/buyservices/service3" onClick={toggleMenu}>
+                Remote Staff Hiring
+              </Link>
             </div>
           </div>
         </div>
@@ -86,12 +98,30 @@ const Navbar = () => {
           </Link>
           <div className="services-dropdown-content">
             <div className="ourservices-dropdown-content">
-              <Link href="/ourservices/service1" onClick={toggleMenu}>Taxi Booking Services</Link>
-              <Link href="/ourservices/service2" onClick={toggleMenu}>Customer Services</Link>
-              <Link href="/ourservices/service2" onClick={toggleMenu}>Outsourcing Services</Link>
-              <Link href="/ourservices/service3" onClick={toggleMenu}>Live Chat Support</Link>
-              <Link href="/ourservices/service3" onClick={toggleMenu}>Email Support Services</Link>
-              <Link href="/ourservices/service3" onClick={toggleMenu}>Remote Staff Hiring</Link>
+              <Link
+                href="/ourservices/taxibookingservices"
+                onClick={toggleMenu}
+              >
+                Taxi Booking Services
+              </Link>
+              <Link
+                href="/ourservices/outsourcingservices"
+                onClick={toggleMenu}
+              >
+                Outsourcing Services
+              </Link>
+              <Link href="/ourservices/livechatsupport" onClick={toggleMenu}>
+                Live Chat Support
+              </Link>
+              <Link href="/ourservices/customersupport" onClick={toggleMenu}>
+                Customer Support
+              </Link>
+              <Link href="/ourservices/emailsupport" onClick={toggleMenu}>
+                Email Support Services
+              </Link>
+              <Link href="/ourservices/career" onClick={toggleMenu}>
+                Remote Staff Hiring
+              </Link>
             </div>
           </div>
         </div>
@@ -105,7 +135,6 @@ const Navbar = () => {
             CONTACT US
           </Link>
         </div>
-        
       </div>
 
       <div className="navbar-social">

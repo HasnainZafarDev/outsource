@@ -61,13 +61,13 @@ const Footer = () => {
           <h2>Service</h2>
           <div className="section-links">
             <li>
-              <Link href="/ourservices">Taxi Booking Services</Link>
+              <Link href="/ourservices/taxibookingservices">Taxi Booking Services</Link>
             </li>
             <li>
-              <Link href="/ourservices">Customer Service</Link>
+              <Link href="/ourservices/customersupport">Customer Service</Link>
             </li>
             <li>
-              <Link href="/ourservices">Outsourcing services</Link>
+              <Link href="/ourservices/outsourcingservices">Outsourcing services</Link>
             </li>
           </div>
         </div>

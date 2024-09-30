@@ -52,7 +52,7 @@
       cursor: pointer;
       transition: var(--button-transition);
     }
-    .services-btn:hover {
+    .contact-btn:hover {
       background-color: var(--button-hover-bg-color);
     }
   }
