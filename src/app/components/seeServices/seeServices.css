@@ -1,0 +1,72 @@
+.services-section {
+  background: linear-gradient(
+      135deg,
+      rgba(48, 17, 1, 0.105),
+      rgba(196, 125, 11, 0.772)
+    ),
+    url("/businesswomanheadset-talk.jpg") no-repeat center center;
+  background-size: cover;
+  height: 80vh;
+  display: flex;
+  /* justify-content: flex-start; */
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  .card {
+    max-width: 442px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px 8px 80px 8px;
+    position: relative;
+    left: 900px;
+    top: 0px;
+    z-index: 2;
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+    }
+    p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .services-btn {
+      background-color: var(--button-bg-color);
+      color: white;
+      padding: 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--button-transition);
+    }
+    .services-btn:hover {
+      background-color: var(--button-hover-bg-color);
+    }
+  }
+}
+
+@media (max-width: 972px) {
+  .services-section {
+    opacity: 85%;
+    width: 100%;
+    height: 70vh;
+    background-size: auto;
+    background-position: 28% 80%;
+    .card {
+      top: 20px;
+      left: 59px;
+      width: 65%;
+      h1 {
+        font-size: 23px;
+      }
+      p {
+        font-size: 22px;
+      }
+      .services-btn {
+        width: 100%;
+      }
+    }
+  }
+}

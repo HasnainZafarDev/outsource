@@ -1,0 +1,92 @@
+.buy-services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  /* margin: 60px 80px; */
+  margin: 60px 50px 60px 100px;
+  .buy-service-card {
+    background: linear-gradient(135deg, #ff7e36, #ffba4e);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+
+    .icon-circle {
+      min-width: 70px;
+      min-height: 70px;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .card-icon {
+        color: white;
+        font-size: 36px;
+      }
+    }
+
+    .card-content {
+      flex: 1;
+      padding: 0 20px;
+      .card-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+    .buy-now-button {
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #ff7e36;
+      background-color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .buy-now-button:hover {
+      background-color: var(--button-hover-bg-color);
+      color: white;
+    }
+  }
+
+  .buy-service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 932px) {
+  .buy-services-container {
+    margin: 20px;
+    .buy-service-card {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px;
+      .card-content{
+        padding: 0px;
+        .card-title{
+          font-size: 24px;
+          font-weight: 800;
+          /* color: var(--button-hover-bg-color); */
+        }
+      }
+      .buy-now-button{
+        padding: 20px;
+        border-radius: 8px;
+        color: var(--button-hover-bg-color);
+      }
+    }
+  }
+}

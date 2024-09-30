@@ -1,0 +1,136 @@
+.features-section {
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 50px; */
+  .content-section {
+    display: flex;
+    color: white;
+    justify-content: center;
+    .left-content {
+      background-color: #1a1f2f;
+      padding: 15px 0px 0 86px;
+      border-top-right-radius: 40px;
+      width: 80%;
+      .small-title {
+        font-size: 16px;
+        color: #fa721b;
+      }
+      .subtitle {
+        font-size: 30px;
+        font-weight: bold;
+      }
+    }
+    .right-content {
+      border-top-left-radius: 40px;
+      background-color: #1a1f2f;
+      width: 100%;
+      padding: 15px 36px 0 0px;
+      .description {
+        font-size: 17px;
+        max-width: 615px;
+        margin-top: 65px;
+        margin-left: 40px;
+      }
+    }
+  }
+  .cards-section {
+    background-color: #1a1f2f;
+    height: 300px;
+    display: flex;
+    padding: 0 86px 50px 50px;
+    gap: 78px;
+    .card {
+      color: white;
+      padding: 35px;
+
+      h1 {
+        font-size: 30px;
+        font-weight: bolder;
+        color: #fa721b;
+      }
+      h2 {
+        font-size: 20px;
+        font-weight: bold;
+        color: #fa721b;
+      }
+      p {
+        font-size: 14px;
+        flex-wrap: nowrap;
+        max-width: 335px;
+      }
+    }
+
+    .overlapping-image {
+      width: 335px;
+      height: 260px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+@media (max-width: 972px) {
+  .features-section {
+    width: 97%;
+    background-color: #1a1f2f;
+    /* just for checking added 0 padding  */
+    /* padding: 0 0 0 0px; */
+
+    margin-top: 0px;
+    .content-section {
+      flex-direction: column;
+
+      .left-content {
+        border-radius: 0px;
+
+        padding: 0 0 0px 10px;
+        /* padding: 0 0 0px 0px; */
+        width: 100%;
+        .subtitle {
+          font-size: 19px;
+          font-weight: 800;
+        }
+      }
+      .right-content {
+        border-radius: 0px;
+        padding: 0 0 0px 10px;
+        /* padding: 0 0 0px 0px; */
+        width: 100%;
+        .description {
+          position: relative;
+          top: -5px;
+          font-size: 24px;
+          color: #b3b3b3;
+          margin-top: 0;
+          max-width: 400px;
+          margin-left: 0px;
+        }
+      }
+    }
+    .cards-section {
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+      padding: 0 0 0px 10px;
+      /* padding: 0 0 0px 0px; */
+      gap: 10px;
+      .card {
+        padding: 0 0 0px 0px;
+        h1 {
+          font-size: 35px;
+        }
+        h2 {
+          font-size: 25px;
+          margin: 0;
+        }
+        p {
+          font-size: 17px;
+          max-width: 402px;
+        }
+      }
+      .overlapping-image {
+        width: 407px;
+        height: 390px;
+      }
+    }
+  }
+}

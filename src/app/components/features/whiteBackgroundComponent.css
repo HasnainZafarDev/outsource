@@ -1,0 +1,12 @@
+.white-background {
+    height: 180px;
+    width: 100%;
+    background-color: white;
+  }
+  
+  @media (max-width: 972px) {
+    .white-background {
+      display: none; 
+    }
+  }
+  

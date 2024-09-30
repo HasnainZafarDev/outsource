@@ -1,0 +1,129 @@
+.our-vision-container {
+  background-color: #1a1f2f;
+  /* padding: 80px 20px; */
+  padding: 60px 20px;
+  color: #fff;
+  .our-vision-top {
+    /* background-color: seagreen; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    /* gap: 138px; */
+    gap: 38px;
+    .vision-content {
+      flex: 1;
+      padding-right: 30px;
+
+      .vision-title {
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: #fa721b;
+      }
+
+      .vision-subtitle {
+        font-size: 42px;
+        font-weight: 800;
+        max-width: 900px;
+        margin-bottom: 20px;
+      }
+
+      .vision-para {
+        font-size: 21px;
+        color: #7886a2;
+        max-width: 872px;
+        margin-bottom: 30px;
+      }
+
+      .vision-btn {
+        padding: 25px;
+        background-color: var(--button-bg-color);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 50px;
+        font-weight: 800;
+        transition: var(--button-transition);
+      }
+
+      .vision-btn:hover {
+        background-color: #e05b1b;
+      }
+    }
+    .vision-image {
+      /* flex: 1; */
+    }
+    .vision-image .image {
+      border-radius: 8px 8px 50px 8px;
+    }
+  }
+
+  .vision-bottom {
+    /* background-color: greenyellow; */
+    display: flex;
+    justify-content: space-between;
+    /* gap: 20px; */
+    .vision-card {
+      /* background-color:salmon; */
+      padding: 20px 20px 20px 0px;
+      border-radius: 10px;
+      width: 18%;
+      .card-image {
+        filter: brightness(0) saturate(100%) invert(55%) sepia(87%)
+          saturate(742%) hue-rotate(-22deg) brightness(96%) contrast(101%);
+      }
+
+      .card-title {
+        font-size: 18px;
+        max-width: 128px;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+
+      .card-para {
+        max-width: 305px;
+        font-size: 17px;
+        color: #7886a2;
+      }
+    }
+  }
+}
+
+@media (max-width: 932px) {
+  .our-vision-container {
+    /* padding: 0px 10px 0px 10px; */
+    padding: 30px;
+    .our-vision-top {
+      margin-bottom: 30px;
+      .vision-content {
+        .vision-title {
+        }
+        .vision-subtitle{
+          font-size: 26px;
+        }
+        .vision-para{
+          font-size: 18px;
+          max-width: 364px;
+        }
+        .vision-btn{
+          font-size: 18px;
+        }
+      }
+      .vision-image {
+        display: none;
+      }
+    }
+    .vision-bottom {
+      flex-direction: column;
+      .vision-card {
+        /* padding: 0px 20px 20px 0px; */
+        width: 100%;
+
+        .card-para {
+          max-width: 382px;
+        }
+      }
+    }
+  }
+}
