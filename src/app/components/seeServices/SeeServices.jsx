@@ -31,7 +31,6 @@ const Services = () => {
         animate={inView ? "visible" : "hidden"}
       >
         <h1>Learn About Our Solutions, Contact Center & Technology</h1>
-        {/* <h1>Learn About Our Solutions, Contact <br/>Center & Technology</h1> */}
         <p>
           Discover our solutions, contact center expertise, and advanced
           technology to drive your business forward. Discover our solutions,

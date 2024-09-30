@@ -54,8 +54,11 @@
     background-position: 77% 36%;
 
     .card {
-      top: 30px;
-      left: 59px;
+      /* height: auto; */
+      /* top: 30px; */
+      /* left: 59px; */
+      top: 3px;
+      left: 35px;
       width: 65%;
       h1 {
         font-size: 23px;
