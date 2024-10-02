@@ -21,6 +21,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     width: 30%;
+    height: auto;
     padding: 0 20px 20px 20px;
     .modal-header {
       display: flex;
@@ -30,7 +31,7 @@
         font-size: 1.5rem;
         font-weight: bold;
         /* color: #333; */
-        color: #4caf50;
+        color: var(--button-bg-color);
       }
 
       .close-button {
@@ -95,7 +96,7 @@
       .modal-price-title {
         font-size: 1.2rem;
         font-weight: bold;
-        color: #4caf50;
+        color: var(--button-bg-color);
         margin-bottom: 10px;
       }
 

@@ -38,7 +38,7 @@ const Features = () => {
             alt="Image 1"
             className="overlapping-image"
             height={260}
-            width={335}
+            width={390}
           />
         </div>
         <div className="card">
@@ -53,7 +53,7 @@ const Features = () => {
             alt="Image 2"
             className="overlapping-image"
             height={260}
-            width={335}
+            width={390}
           />
         </div>
         <div className="card">
@@ -68,7 +68,7 @@ const Features = () => {
             alt="Image 3"
             className="overlapping-image"
             height={260}
-            width={335}
+            width={390}
           />
         </div>
       </div>

@@ -24,7 +24,7 @@
       border-top-left-radius: 40px;
       background-color: #1a1f2f;
       width: 100%;
-      padding: 15px 36px 0 0px;
+      padding: 15px 0px 0 0px;
       .description {
         font-size: 17px;
         max-width: 615px;
@@ -49,20 +49,18 @@
         color: #fa721b;
       }
       h2 {
-        font-size: 20px;
+        font-size: 23px;
         font-weight: bold;
         color: #fa721b;
       }
       p {
         font-size: 14px;
         flex-wrap: nowrap;
-        max-width: 335px;
+        max-width: 390px;
       }
     }
 
     .overlapping-image {
-      width: 335px;
-      height: 260px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }

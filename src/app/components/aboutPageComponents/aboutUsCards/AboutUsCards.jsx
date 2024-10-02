@@ -37,7 +37,7 @@ const AboutUsCards = () => {
       id: 3,
       title: "Sales Services",
       description:
-        "Boost your business growth with our comprehensive sales services. At Lets Outsource, we provide tailored sales strategies that align with your business objectives. Our team of experienced sales professionals works closely with you to understand your target market and deliver results-driven solutions. From lead generation to closing deals, we are dedicated to helping you achieve your sales goals efficiently and effectively.",
+        "Boost your business growth with our comprehensive sales services. At Lets Outsource, we provide tailored sales strategies that align with your business objectives. Our team of experienced sales professionals works closely with you to understand your target market and deliver results-driven solutions. From lead generation to closing deals, we are helping you to achieve your sales goals efficiently and effectively.",
       image: "/sale-service.png",
     },
     {

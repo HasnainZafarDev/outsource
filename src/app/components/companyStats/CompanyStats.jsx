@@ -8,7 +8,9 @@ import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
 
 const CompanyStats = () => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+  const [imageRef, imageInView] = useInView({ triggerOnce: true, threshold: 0.2 });
+  const [cardRef, cardInView] = useInView({ triggerOnce: true, threshold: 0.2 });
+
   const cardImageVariants = {
     hidden: { opacity: 0, x: -100 },
     visible: {
@@ -36,10 +38,10 @@ const CompanyStats = () => {
       {/* First Card - Image */}
       <motion.div
         className="card-image"
-        ref={ref}
+        ref={imageRef}
         initial="hidden"
         variants={cardImageVariants}
-        animate={inView ? "visible" : "hidden"}
+        animate={imageInView ? "visible" : "hidden"}
       >
         <Image
           src="/woman-in-headset.jpg"
@@ -53,17 +55,17 @@ const CompanyStats = () => {
       {/* Second Card - Customers */}
       <motion.div
         className="card"
-        ref={ref}
+        ref={cardRef}
         initial="hidden"
         variants={cardVariants}
-        animate={inView ? "visible" : "hidden"}
+        animate={cardInView ? "visible" : "hidden"}
       >
         <h3>
           Total Customers <br />
           Served
         </h3>
         <h1>
-          {inView && (
+          {cardInView && (
             <CountUp start={0} end={5.4} duration={2} decimals={1} suffix="M" />
           )}
         </h1>
@@ -77,17 +79,17 @@ const CompanyStats = () => {
       {/* Third Card - Employees */}
       <motion.div
         className="card"
-        ref={ref}
+        ref={cardVariants}
         initial="hidden"
         variants={cardVariants}
-        animate={inView ? "visible" : "hidden"}
+        animate={cardInView ? "visible" : "hidden"}
       >
         <h3>
           Total Operating <br />
           Employees
         </h3>
         <h1>
-          {inView && <CountUp start={0} end={269} duration={2} decimals={0} />}
+          {cardInView && <CountUp start={0} end={269} duration={2} decimals={0} />}
         </h1>
 
         <p>

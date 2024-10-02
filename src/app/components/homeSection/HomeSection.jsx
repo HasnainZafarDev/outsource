@@ -36,9 +36,9 @@ const HomeSection = () => {
           <p className="paragraph">
             Established in October 2020, Let's Outsource is dedicated to
             providing top-notch support and outsourcing services tailored to
-            meet your unique business needs. Whether you need reliable taxi
-            booking and dispatching, efficient remote staff hiring, or
-            comprehensive customer support, we've got you covered.
+            meet your unique business needs.Whether you need reliable taxi
+            booking and dispatching,efficient remote staff hiring,or
+            comprehensive customer support,we've got you covered.
           </p>
           <button className="quote-button">REQUEST A QUOTE</button>
         </motion.div>

@@ -175,11 +175,11 @@
         }
       }
       .input-full-width{
-        width: 93%;
+        width: 100%;
         padding: 14px;
       }
       .message-area{
-        width: 93%;
+        width: 92%;
         padding: 14px;
       }
       .send-button{
