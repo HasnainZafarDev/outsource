@@ -84,7 +84,7 @@ const Careerpage = () => {
               src="/happy-company.jpg"
               alt="Working at LetsOutsource"
               width={680}
-              height={500}
+              height={480}
               className="working-img"
             />
           </div>
