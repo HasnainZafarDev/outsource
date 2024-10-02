@@ -119,17 +119,19 @@
           font-size: 35px;
         }
         h2 {
-          font-size: 25px;
+          font-size: 27px;
           margin: 0;
         }
         p {
           font-size: 17px;
-          max-width: 402px;
+          max-width: 400px;
         }
       }
       .overlapping-image {
-        width: 407px;
-        height: 390px;
+        /* width: 407px; */
+        /* height: 390px; */
+        width: auto;
+        height: auto;
       }
     }
   }

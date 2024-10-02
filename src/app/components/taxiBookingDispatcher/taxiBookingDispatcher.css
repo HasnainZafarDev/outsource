@@ -47,8 +47,11 @@
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
       h3 {
         color: #fa721b;
+        font-family: fantasy;
+        font-weight: normal;
       }
       p {
+        font-family: fantasy;
         font-size: 15px;
         color: #7a7878;
       }
@@ -70,7 +73,7 @@
 
     .description {
       font-size: 1rem;
-      color: #ccc;
+      color: #333;
       margin-bottom: 1px;
     }
 
@@ -80,7 +83,8 @@
       margin-top: 40px;
 
       .card {
-        background-color: #f7f7f7;
+        /* background-color: #f7f7f7; */
+        background: linear-gradient(135deg, #c4c5c6bd, #fefefe8f);
         padding: 20px;
         border-radius: 8px;
         width: 400px;
@@ -88,20 +92,26 @@
 
         h3 {
           color: #fa721b;
+          font-family: fantasy;
+          font-weight: normal;
         }
         p {
           font-size: 18px;
-          color: #b3b3b3;
+          /* color: #b3b3b3; */
+          color: #333;
+          font-family: fantasy;
         }
       }
       .card-number {
         font-weight: bold;
         font-size: 50px;
         color: #fa721b;
+        font-family: fantasy;
       }
       .read-more {
         color: #fa721b;
         font-size: 16px;
+        font-family: fantasy;
       }
 
       .read-more:hover {

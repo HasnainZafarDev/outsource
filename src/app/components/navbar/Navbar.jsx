@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./navbar.css";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { FaBars, FaTimes } from "react-icons/fa"; // Import menu icons
+import { FaBars, FaTimes } from "react-icons/fa"; 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";

@@ -20,6 +20,7 @@
 
   .features-section {
     text-align: center;
+    background-color: transparent;
     .section-title {
       font-size: 45px;
       margin-bottom: 45px;
@@ -37,9 +38,14 @@
         padding: 2rem;
         text-align: center;
         width: 250px;
+        height: auto;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease-in-out;
         cursor: pointer;
+        h3{
+          font-family: fantasy;
+          font-weight: normal;
+        }
         p {
           color: #979696;
         }
@@ -84,6 +90,7 @@
           font-size: 1.8rem;
           color: var(--button-bg-color);
           font-weight: 600;
+          font-family: fantasy;
           margin-bottom: 0.5rem;
         }
       }

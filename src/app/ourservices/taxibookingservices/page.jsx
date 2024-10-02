@@ -38,7 +38,7 @@ const TaxiBookingServices = () => {
             <FaMobileAlt className="feature-icon" />
             <h3>Seamless Booking</h3>
             <p>
-              Book a taxi effortlessly via our sleek mobile app or website.
+              Book a taxi effortlessly via our mobile app or website.
             </p>
           </motion.div>
           <motion.div
@@ -49,7 +49,7 @@ const TaxiBookingServices = () => {
             <FaMapMarkedAlt className="feature-icon" />
             <h3>Location Tracking</h3>
             <p>
-              Track your driver and estimate arrival time with ease.
+              Track your driver and estimate arrival time.
             </p>
           </motion.div>
           <motion.div

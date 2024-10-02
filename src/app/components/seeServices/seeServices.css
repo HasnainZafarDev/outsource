@@ -55,19 +55,20 @@
     background-size: auto;
     background-position: 28% 80%;
     .card {
-      /* height: auto; */
-      /* top: 20px; */
-      /* left: 59px; */
+      /* if it then give some issue so remove height  */
       top: 3px;
       left: 35px;
       width: 65%;
+      height: auto;
       h1 {
         font-size: 23px;
+       
       }
       p {
         font-size: 22px;
       }
       .services-btn {
+        margin: 0;
         width: 100%;
       }
     }
