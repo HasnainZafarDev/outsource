@@ -126,10 +126,8 @@
         }
       }
       .overlapping-image {
-        /* width: 407px; */
-        /* height: 390px; */
-        width: auto;
-        height: auto;
+        width: 400px;
+        height: 310px;
       }
     }
   }
