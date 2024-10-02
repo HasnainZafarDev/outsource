@@ -13,8 +13,8 @@
     }
   }
   .card {
-    /* background-color: #f7f7f7; */
-    background: linear-gradient(135deg,#d7d7d78f, #fffcfc);
+    background-color: #f7f7f7;
+    /* background: linear-gradient(135deg,#d7d7d78f, #fffcfc); */
     
     padding: 60px;
     border-radius: 10px;
