@@ -1,0 +1,183 @@
+.taxi-booking-container {
+  background: linear-gradient(135deg, #fefefe8f, #c4c5c6bd);
+  color: #333;
+  padding: 40px 40px 60px 100px;
+
+  .taxi-header {
+    text-align: center;
+    margin-bottom: 60px;
+    .title {
+      font-size: 60px;
+      font-weight: 600;
+      color: var(--button-bg-color);
+    }
+    .subtitle {
+      font-size: 30px;
+      color: #555;
+      margin-top: 1rem;
+    }
+  }
+
+  .features-section {
+    text-align: center;
+    .section-title {
+      font-size: 45px;
+      margin-bottom: 45px;
+      color: var(--button-bg-color);
+      font-weight: 500;
+    }
+    .features-grid {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+      .feature-card {
+        background-color: white;
+        border-radius: 12px;
+        padding: 2rem;
+        text-align: center;
+        width: 250px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        p {
+          color: #979696;
+        }
+        .feature-icon {
+          font-size: 2.5rem;
+          color: var(--button-bg-color);
+          margin-bottom: 1rem;
+        }
+      }
+
+      .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  .how-it-works-section {
+    margin-top: 4rem;
+    text-align: center;
+
+    .steps-container {
+      display: flex;
+      /* justify-content: space-around; */
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0px 20px 0 15px;
+      gap: 20px;
+      .step {
+        width: 45%;
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        p {
+          color: #979696;
+        }
+
+        .step-number {
+          display: block;
+          font-size: 1.8rem;
+          color: var(--button-bg-color);
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .step:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  .testimonials-section {
+    margin-top: 4rem;
+    text-align: center;
+
+    .testimonials-container {
+      display: flex;
+      gap: 20px;
+      /* justify-content: space-between; */
+      margin-top: 2rem;
+      .testimonial {
+        /* background-color: white; */
+        color: #979696;
+        background-color: transparent;
+        padding: 20px;
+        margin-left: 16px;
+        border-radius: 12px;
+        /* width: 350px; */
+        width: 50%;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        strong{
+          color: black;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 932px) {
+  .taxi-booking-container {
+    padding: 10px 10px 40px 10px;
+    .taxi-header {
+      text-align: start;
+      margin-bottom: 10px;
+      .title {
+        /* color: #333; */
+        font-size: 35px;
+      }
+      .subtitle {
+        color: #979696;
+        font-size: 26px;
+        max-width: 371px;
+      }
+    }
+    .features-section {
+      text-align: start;
+      .section-title {
+        /* color: #333; */
+        font-weight: bold;
+        font-size: 29px;
+        margin-bottom: 25px;
+      }
+      .features-grid {
+        justify-content: space-between;
+        gap: 10px;
+        .feature-card {
+          width: 100%;
+        }
+      }
+    }
+    .how-it-works-section {
+      margin: 0px;
+      .steps-container {
+        margin: 0px;
+        .step {
+          width: 109%;
+          padding: 10px;
+        }
+      }
+    }
+    .testimonials-section {
+      margin: 0px;
+      .testimonials-container {
+        margin: 0px;
+        gap: 20px;
+        .testimonial {
+          color: #979696;
+          text-align: start;
+          background-color: transparent;
+          margin-left: 0px;
+          width: 40%;
+          strong{
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}

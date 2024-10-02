@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react'
 
-const page = () => {
-  return <div> live chat page</div>;
-};
+const LiveSupportPage = () => {
+  return (
+    <div>LiveSupportPage</div>
+  )
+}
 
-export default page;
+export default LiveSupportPage

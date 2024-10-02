@@ -62,7 +62,7 @@ const Navbar = () => {
           >
             BUY OUR SERVICES
           </Link>
-          <div className="services-dropdown-content">
+          {/* <div className="services-dropdown-content">
             <div className="buyservices-dropdown-content">
               <Link href="/buyservices/service1" onClick={toggleMenu}>
                 Taxi Booking Services
@@ -83,7 +83,7 @@ const Navbar = () => {
                 Remote Staff Hiring
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="dropdown">

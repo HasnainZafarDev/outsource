@@ -1,7 +1,10 @@
-import React from "react";
+import React from 'react'
+import "./emailSupport.css"
 
-const page = () => {
-  return <div>Email Support page</div>;
-};
+const EmailSupportPage = () => {
+  return (
+    <div>EmailSupportPage</div>
+  )
+}
 
-export default page;
+export default EmailSupportPage
