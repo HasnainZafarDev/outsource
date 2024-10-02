@@ -14,7 +14,7 @@ export async function POST(req) {
 
   // Email options
   let mailOptions = {
-    from: email,
+    from: `"${email}" <hasnainpak3@gmail.com>`,
     to: "hasnainpak3@gmail.com",
     subject: subject,
     text: `Name: ${name}\n Subject: ${subject} \n Email: ${email}\n\nMessage:\n${message}`,

@@ -83,22 +83,6 @@ const ContactTop = () => {
           </div>
         </div>
       </div>
-
-      {/* Right Section */}
-      {/* <div className="right-section">
-        <h5>Talk To Us</h5>
-        <h2>How Can We Help Your Business To Grow?</h2>
-        <p>Please feel free to contact our 24/7 support number.</p>
-        <p className="support-phone">01623 396 943</p>
-        <div className="inputs-first-row">
-          <input type="text" placeholder="Name" className="input-field" />
-          <input type="email" placeholder="Email" className="input-field" />
-        </div>
-        <input type="text" placeholder="Subject" className="input-full-width" />
-        <textarea placeholder="Message" className="message-area"></textarea>
-        <button className="send-button">SEND MESSAGE</button>
-      </div> */}
-
       <div className="right-section">
         <h5>Talk To Us</h5>
         <h2>How Can We Help Your Business To Grow?</h2>
