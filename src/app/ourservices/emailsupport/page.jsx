@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import "./emailSupport.css";
+import Confirmation from "./Confirmation";
 
 const EnhancedOnboardingForm = () => {
   const [formData, setFormData] = useState({
@@ -31,6 +32,7 @@ const EnhancedOnboardingForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [feedbackMessage, setFeedbackMessage] = useState("");
+  const [isConfirmed, setIsConfirmed] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -39,8 +41,13 @@ const EnhancedOnboardingForm = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    setIsConfirmed(true);
+    setFeedbackMessage("");
+  };
+
+  const handleConfirm = async () => {
     setIsSubmitting(true);
     try {
       const response = await fetch("/api/sendOnboardingQuestionnaire", {
@@ -48,12 +55,12 @@ const EnhancedOnboardingForm = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData), // Send the entire formData object
+        body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
-        throw new Error("Failed to send the onboarding questionnaire");
         setFeedbackMessage("Failed to send the message.");
+        return;
       }
 
       const result = await response.json();
@@ -62,7 +69,14 @@ const EnhancedOnboardingForm = () => {
       setFeedbackMessage("Failed to send the message.");
     } finally {
       setIsSubmitting(false);
+      setIsConfirmed(false);
+      setFeedbackMessage("")
     }
+  };
+
+  const handleEdit = () => {
+    setIsConfirmed(false);
+    setFeedbackMessage("")
   };
 
   return (
@@ -74,8 +88,15 @@ const EnhancedOnboardingForm = () => {
         taxi booking and dispatch operations. To ensure a smooth onboarding
         process, kindly provide us with the following information:
       </p>
+      {isConfirmed ? (
+        <Confirmation
+          formData={formData}
+          onConfirm={handleConfirm}
+          onEdit={handleEdit}
+        />
+      ) :(
 
-      <form onSubmit={handleSubmit} className="onboarding-form">
+        <form onSubmit={handleSubmit} className="onboarding-form">
         <section>
           <h2>General Information</h2>
           <div className="form-grid">
@@ -340,10 +361,12 @@ const EnhancedOnboardingForm = () => {
           </div>
         </section>
 
-        <button type="submit" className="submit-button">
+        <button type="submit" className="submit-button" disabled={isSubmitting}>
           {isSubmitting ? "Submitting..." : "Submit Form"}
         </button>
       </form>
+      )}
+
       {feedbackMessage && <p>{feedbackMessage}</p>}
 
       <div className="form-footer">

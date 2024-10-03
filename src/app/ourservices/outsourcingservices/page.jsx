@@ -1,8 +1,13 @@
 "use client";
 import React from "react";
-import { FaHandsHelping, FaBriefcase, FaGlobe, FaCheckCircle } from "react-icons/fa";
+import {
+  FaHandsHelping,
+  FaBriefcase,
+  FaGlobe,
+  FaCheckCircle,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
-import "./outSourcingPage.css"; // Updated CSS file for the new design
+import "./outSourcingPage.css";
 
 const OutsourcingPage = () => {
   return (
@@ -16,7 +21,8 @@ const OutsourcingPage = () => {
       >
         <h1 className="title">Outsourcing Services</h1>
         <p className="subtitle">
-          Efficient, reliable, and cost-effective outsourcing solutions for your business needs.
+          Efficient, reliable, and cost-effective outsourcing solutions for your
+          business needs.
         </p>
       </motion.div>
 
@@ -37,7 +43,8 @@ const OutsourcingPage = () => {
             <FaHandsHelping className="feature-icon" />
             <h3>Dedicated Support</h3>
             <p>
-              Our team provides 24/7 support to ensure your operations run smoothly.
+              Our team provides 24/7 support to ensure your operations run
+              smoothly.
             </p>
           </motion.div>
           <motion.div
@@ -48,7 +55,8 @@ const OutsourcingPage = () => {
             <FaBriefcase className="feature-icon" />
             <h3>Professional Experts</h3>
             <p>
-              Access a global pool of talent to handle specialized tasks for your business.
+              Access a global pool of talent to handle specialized tasks for
+              your business.
             </p>
           </motion.div>
           <motion.div
@@ -59,7 +67,8 @@ const OutsourcingPage = () => {
             <FaGlobe className="feature-icon" />
             <h3>Global Reach</h3>
             <p>
-              Expand your business with our comprehensive outsourcing solutions, anywhere in the world.
+              Expand your business with our comprehensive outsourcing solutions,
+              anywhere in the world.
             </p>
           </motion.div>
           <motion.div
@@ -91,11 +100,15 @@ const OutsourcingPage = () => {
           </div>
           <div className="step">
             <span className="step-number">2</span>
-            <p>We connect you with the best-suited professionals for the task.</p>
+            <p>
+              We connect you with the best-suited professionals for the task.
+            </p>
           </div>
           <div className="step">
             <span className="step-number">3</span>
-            <p>Our team works with you to ensure smooth delivery of services.</p>
+            <p>
+              Our team works with you to ensure smooth delivery of services.
+            </p>
           </div>
           <div className="step">
             <span className="step-number">4</span>
@@ -115,12 +128,15 @@ const OutsourcingPage = () => {
         <div className="testimonials-container">
           <div className="testimonial">
             <p>
-              "Outsourcing with them  boosted our productivity and saved a lot of resources."<br /> <strong>Jessica L.</strong>
+              "Outsourcing with them boosted our productivity and saved a lot of
+              resources."
+              <br /> <strong>Jessica L.</strong>
             </p>
           </div>
           <div className="testimonial">
             <p>
-              "Their professionalism and dedication to quality really stand out." <br /> <strong>Mark R.</strong>
+              "Their professionalism and dedication to quality really stand
+              out." <br /> <strong>Mark R.</strong>
             </p>
           </div>
         </div>
