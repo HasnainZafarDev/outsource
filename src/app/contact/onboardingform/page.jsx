@@ -493,7 +493,7 @@ const OnboardingForm = () => {
           <button
             type="submit"
             className="submit-button"
-            disabled={isSubmitting}
+            disabled={isSubmitting}            
           >
             {isSubmitting ? "Submitting..." : "Submit Form"}
           </button>
