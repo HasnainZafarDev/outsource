@@ -70,10 +70,14 @@ const OnboardingForm = () => {
       const newFleetTypes = checked
         ? [...prevData.fleetTypes, value]
         : prevData.fleetTypes.filter((type) => type !== value);
-      const newVehicleCounts = {
-        ...prevData.vehicleCounts,
-        ...(checked ? { [value]: 1 } : { [value]: undefined }),
-      };
+      const newVehicleCounts = { ...prevData.vehicleCounts };
+      if (checked) {
+        // If checked, add the vehicle type with an initial count of 1
+        newVehicleCounts[value] = 1;
+      } else {
+        // If unchecked, remove the vehicle type from vehicleCounts
+        delete newVehicleCounts[value];
+      }
 
       return {
         ...prevData,
@@ -493,7 +497,7 @@ const OnboardingForm = () => {
           <button
             type="submit"
             className="submit-button"
-            disabled={isSubmitting}            
+            disabled={isSubmitting}
           >
             {isSubmitting ? "Submitting..." : "Submit Form"}
           </button>

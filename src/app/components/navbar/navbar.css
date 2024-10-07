@@ -92,7 +92,7 @@
   .navbar {
     padding:0px 10px 0 10px;
     margin: 0px;
-    .navbar-links {
+   .navbar-links {
       display: none;
       position: absolute;
       top: 100px;
@@ -114,6 +114,7 @@
     }
   }
   .navbar-links.active {
+    z-index: 1;
     display: flex;
   }
 }
