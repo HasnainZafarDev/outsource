@@ -43,12 +43,17 @@
     .contact-btn {
       background-color: var(--button-bg-color);
       color: white;
-      width: 50%;
-      padding: 30px;
-      margin-top: 20px;
+      width: 70%;
+      /* padding: 30px; */
+      text-align: start;
+      padding: 30px 0px 30px 5px;
+      margin-top: 2px;
       border: none;
+      font-size: 21px;
       font-weight: bold;
-      border-radius: 50px;
+      /* border-radius: 50px; */
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
       cursor: pointer;
       transition: var(--button-transition);
     }
@@ -69,16 +74,22 @@
       top: 3px;
       left: 35px;
       width: 65%;
+      /* width: 56%; */
+      padding: 30px;
       h1 {
-        font-size: 24px;
-      }
-      p {
+        /* font-size: 24px; */
         font-size: 19px;
       }
+      p {
+        /* font-size: 19px; */
+        font-size: 15px;
+      }
       .contact-btn {
-        font-size: 20px;
-        padding: 20px;
-        width: 100%;
+        text-align: start;
+        font-size: 18px;
+        /* padding: 20px; */
+        padding: 20px 0px 20px 5px;
+        width: 92%;
         margin-top: 0px;
       }
     }

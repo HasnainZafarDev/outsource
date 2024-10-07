@@ -6,7 +6,6 @@ const Features = () => {
   return (
     <div className="features-section">
       <div className="content-section">
-        
         <div className="left-content">
           <h3 className="small-title">FEATURES</h3>
           <h2 className="subtitle">
@@ -16,11 +15,11 @@ const Features = () => {
 
         <div className="right-content">
           <p className="description">
-            Ut tristique et egestas quis ipsum suspendisse ultrices gravida
-            dictum. At risus viverra adipiscing at in tellus. Nisl nunc
-            mi ipsum faucibus vitae 
-            aliquet nec. Blandit libero volutpat sed cras ornare arcu dui
-            vivamus arcu.
+            At Lets Outsource, we specialize in providing affordable and expert
+            outsourcing solutions tailored to your business needs. Our
+            experienced operators and dispatchers ensure smooth operations in
+            areas like taxi booking and customer support, allowing you to focus
+            on what you do best—growing your business 🙂
           </p>
         </div>
       </div>
@@ -30,8 +29,8 @@ const Features = () => {
           <h1>.01</h1>
           <h2>Customer Care & Support</h2>
           <p>
-            Nisi quis eleifend quam adipiscing vitae proin sagittis. Cursus
-            vitae congue mauris rhoncus aenean.
+            Exceptional customer care and support to boost satisfaction and
+            enhance long-term loyalty.
           </p>
           <Image
             src="/headset.jpg"
@@ -45,8 +44,8 @@ const Features = () => {
           <h1>.02</h1>
           <h2>Technical Support</h2>
           <p>
-            Nisi quis eleifend quam adipiscing vitae proin sagittis. Cursus
-            vitae congue mauris rhoncus aenean.
+            Reliable technical support to resolve issues swiftly and keep your
+            operations running smoothly.
           </p>
           <Image
             src="/female-agent.jpg"
@@ -58,10 +57,10 @@ const Features = () => {
         </div>
         <div className="card">
           <h1>.03</h1>
-          <h2>Medical Billing</h2>
+          <h2>24/7 Availability</h2>
           <p>
-            Nisi quis eleifend quam adipiscing vitae proin sagittis. Cursus
-            vitae congue mauris rhoncus aenean.
+            Round-the-clock support to ensure your business is always up and
+            running efficiently.
           </p>
           <Image
             src="/smiling-businesswoman.jpg"
@@ -72,7 +71,6 @@ const Features = () => {
           />
         </div>
       </div>
-
     </div>
   );
 };

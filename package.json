@@ -10,10 +10,11 @@
   },
   "dependencies": {
     "dotenv": "^16.4.5",
-    "framer-motion": "^11.5.6",
     "googleapis": "^144.0.0",
+    "iconv-lite": "^0.6.3",
     "next": "^14.2.13",
     "nodemailer": "^6.9.15",
+    "pdfkit": "^0.15.0",
     "react": "^18",
     "react-countup": "^6.5.3",
     "react-dom": "^18",
