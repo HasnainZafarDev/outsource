@@ -19,7 +19,7 @@ const OnboardingForm = () => {
     "Volkswagen Multivan",
     "6 Seater",
     "8 Seater",
-    "WheelChair Accessible Vehicles",
+    "WheelChair Affordable",
   ];
   const initialState = {
     companyName: "",
