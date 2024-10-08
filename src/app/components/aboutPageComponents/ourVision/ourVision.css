@@ -100,13 +100,16 @@
         .vision-title {
         }
         .vision-subtitle{
-          font-size: 26px;
+          font-size: 25px;
         }
         .vision-para{
           font-size: 18px;
           max-width: 364px;
         }
         .vision-btn{
+          border-radius: 0px;
+          border-top-right-radius: 50px;
+          border-bottom-right-radius: 50px;
           font-size: 18px;
         }
       }

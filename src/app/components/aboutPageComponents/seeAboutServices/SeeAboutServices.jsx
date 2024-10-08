@@ -5,8 +5,10 @@ import "./seeAboutServices.css";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import CustomShapeIcon from "@/utils/CustomShapeIcon";
+import { useRouter } from "next/navigation";
 
 const SeeAboutServices = () => {
+  const router = useRouter();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
   const servicesCardVariants = {
     hidden: { opacity: 0, x: -150 },
@@ -19,9 +21,12 @@ const SeeAboutServices = () => {
       },
     },
   };
+  const handleNavigation = () => {
+    router.push("contact");
+  };
   return (
     <div className="about-services-section">
-      <CustomShapeIcon className="svg-image"/>
+      <CustomShapeIcon className="svg-image" />
       <motion.div
         className="card"
         ref={ref}
@@ -35,7 +40,9 @@ const SeeAboutServices = () => {
           about how our services can benefit your business, don’t hesitate to
           reach out. Our team is ready to assist you.
         </p>
-        <button className="services-btn">SEE SERVICES</button>
+        <button className="services-btn" onClick={handleNavigation}>
+          CONTACT US
+        </button>
       </motion.div>
     </div>
   );
