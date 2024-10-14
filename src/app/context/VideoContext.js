@@ -1,17 +1,17 @@
 "use client";
 import { createContext, useState, useContext } from "react";
 
-const VideoContext = createContext();
+const videoContext = createContext();
 export const useVideoContext = () => {
-  return useContext(VideoContext);
+  return useContext(videoContext);
 };
 
 export const VideoProvider = ({ children }) => {
   const [currentVideo, setCurrentVideo] = useState(0);
 
   return (
-    <VideoContext.Provider value={{ currentVideo, setCurrentVideo }}>
+    <videoContext.Provider value={{ currentVideo, setCurrentVideo }}>
       {children}
-    </VideoContext.Provider>
+    </videoContext.Provider>
   );
 };
