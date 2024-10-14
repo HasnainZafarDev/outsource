@@ -4,6 +4,11 @@ import { FaCheckCircle } from "react-icons/fa";
 import Image from "next/image";
 
 const OurMission = () => {
+  const missionServices = [
+    "LEAD QUALIFICATION",
+    "REGISTRATION UPDATE",
+    "SATISFACTION SURVEY",
+  ];
   return (
     <div className="our-mission-container">
       {/* Left Content Div */}
@@ -28,22 +33,18 @@ const OurMission = () => {
           executed with precision and a commitment to excellence.
         </p>
         <ul className="mission-list">
-          <li>
-            <FaCheckCircle className="tick-icon" /> LEAD QUALIFICATION
-          </li>
-          <li>
-            <FaCheckCircle className="tick-icon" /> REGISTRATION UPDATE
-          </li>
-          <li>
-            <FaCheckCircle className="tick-icon" /> SATISFICTION SURVEY
-          </li>
+          {missionServices.map((service, index) => (
+            <li key={index}>
+              <FaCheckCircle className="tick-icon" /> {service}
+            </li>
+          ))}
         </ul>
       </div>
 
       {/* Right Image Div */}
       <div className="mission-image-div">
         <Image
-        className="mission-image"
+          className="mission-image"
           src="/male-call-centre-worker.jpg"
           alt="Our Mission"
           height={600}

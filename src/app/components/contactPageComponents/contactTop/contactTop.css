@@ -34,14 +34,18 @@
         .info-block {
           margin-bottom: -10px;
           h4 {
-            font-weight: bold;
             font-size: 20px;
+            font-weight: 700;
             color: #1a1f2f;
+            line-height: 1.5em;
+            letter-spacing: -0.5px;
           }
           p {
+            font-family: "Manrope", sans-serif;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.8em;
             color: #7886a2;
-            max-width: 236px;
-            font-size: 15px;
             margin-top: -20px;
           }
         }
@@ -58,13 +62,19 @@
       margin-bottom: 10px;
     }
     h2 {
-      font-size: 35px;
       color: #1a1f2f;
-      font-weight: 800;
+      font-size: 39.06px;
+      font-weight: 700;
       max-width: 440px;
+      line-height: 1.2em;
+      letter-spacing: -2px;
       margin-bottom: 15px;
     }
     p {
+      font-family: "Manrope", sans-serif;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 1.8em;
       color: #7886a2;
       margin-bottom: 10px;
     }
@@ -78,45 +88,51 @@
       margin-bottom: 15px;
       width: 80%;
       .input-field {
-        width: 100%;
-        padding: 16px;
-        color: #7886a2;
         font-size: 16px;
-        border: 1px solid #eae3e3;
+        min-height: 47px;
+        padding: 6px 16px;
         border-radius: 4px;
+        width: 100%;
+        color: #7886a2;
+        border: 1px solid #f1f0f0;
         outline: none;
       }
     }
     .input-full-width {
-      width: 76%;
-      padding: 16px;
-      color: #7886a2;
-      border: 1px solid #eae3e3;
-      border-radius: 4px;
       font-size: 16px;
+      min-height: 47px;
+      padding: 6px 16px;
+      width: 76%;
+      color: #7886a2;
+      border: 1px solid #f1f0f0;
+      border-radius: 4px;
       margin-bottom: 20px;
       outline: none;
     }
     .message-area {
-      width: 76%;
-      padding: 16px;
-      color: #7886a2;
-      border: 1px solid #eae3e3;
-      border-radius: 4px;
       font-size: 16px;
-      height: 100px;
+      min-height: 47px;
+      padding: 6px 16px;
+      width: 76%;
+      color: #7886a2;
+      border: 1px solid #f1f0f0;
+      border-radius: 4px;
+      height: 88px;
       margin-bottom: 15px;
       outline: none;
     }
     .send-button {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.8em;
       background-color: var(--button-bg-color);
       color: white;
-      padding: 20px;
-      width: 30%;
+      padding: 15px 30px;
+      /* width: 30%; */
       border: none;
-      border-radius: 50px;
+      border-radius: 100px;
       cursor: pointer;
-      font-weight: bold;
       transition: var(--button-transition);
     }
     .send-button:hover {
@@ -156,36 +172,35 @@
     }
     .right-section {
       margin: 20px;
-      h5{
+      h5 {
         font-size: 20px;
       }
-      h2{
+      h2 {
         font-size: 30px;
       }
-      p{
+      p {
         font-size: 19px;
       }
-      .support-phone{
+      .support-phone {
         font-size: 19px;
       }
-      .inputs-first-row{
+      .inputs-first-row {
         width: 100%;
-        .input-field{
-            padding: 14px;
+        .input-field {
+          padding: 14px;
         }
       }
-      .input-full-width{
+      .input-full-width {
         width: 92%;
         padding: 14px;
       }
-      .message-area{
+      .message-area {
         width: 92%;
         padding: 14px;
       }
-      .send-button{
+      .send-button {
         width: 100%;
       }
-
     }
   }
 }

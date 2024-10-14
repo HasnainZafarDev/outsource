@@ -11,7 +11,7 @@ const OurVision = () => {
       icon: "/icon1.png",
       title: "Customer Service",
       description:
-        "Delivering exceptional customer service is at the heart of what we do. We ensure your customers receive the support they need, when they need it.",
+        "Delivering exceptional customer service is at the heart of what we do. We ensure your customers receive the support they need.",
     },
     {
       icon: "/icon2.png",
@@ -53,7 +53,7 @@ const OurVision = () => {
         <div className="vision-content">
           <h3 className="vision-title">OUR VISION</h3>
           <h1 className="vision-subtitle">
-            Our Purpose Is To Improve Communication With Your Customers
+            Our Purpose Is To Improve <br />Communication With Your Customers
           </h1>
           <p className="vision-para">
             Our purpose is to enhance communication with your customers. We

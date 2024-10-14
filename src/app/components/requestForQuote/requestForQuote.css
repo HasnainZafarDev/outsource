@@ -1,87 +1,55 @@
 .request-quote-section {
   background-color: #1a1f2f;
-  padding: 50px 50px 0 50px;
+  padding: 20px 50px 0 50px;
   color: white;
   display: flex;
   gap: 28px;
-  .first-section {
-    max-width: 500px;
-    margin-left: 35px;
-    .section-title {
-      color: #fa721b;
-      font-size: 37px;
-      font-weight: 900;
-      margin: 0;
-    }
-    .section-description {
-      padding-left: 4px;
-      font-size: 16px;
-      margin-top: 2px;
-      margin-bottom: 0px;
-    }
 
-    .tick-item {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin: 1px;
-      .tick-content {
-        padding: 10px;
-        h3 {
-          font-size: 25px;
-          color: white;
-          margin: 0px;
-        }
-        p {
-          font-size: 16px;
-          color: #7886a2;
-        }
-      }
-    }
+  .image-section {
+    flex: 1;
   }
-  .form-section {
-    height: 393px;
-    width: 368px;
-    background-color: white;
-    border-radius: 5px;
-    padding: 50px;
-    margin-right: 40px;
-    margin-left: 40px;
-    border-bottom-right-radius: 60px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 15px;
 
+  .form-section {
     .quote-form {
       display: flex;
       flex-direction: column;
       gap: 10px;
+      background-color: #ffffff;
+      padding: 1px 50px 20px 50px;
+      border-radius: 100px 20px 120px 20px;
+      margin-top: 33px;
       h2 {
-        color: black;
-        font-weight: bold;
-        font-size: 30px;
+        font-size: 39.06px;
+        font-weight: 700;
+        font-style: normal;
+        line-height: 1.2em;
+        letter-spacing: -2px;
+        color: #1a1f2f;
       }
       .input-row {
         display: flex;
         gap: 20px;
-        
+        flex-direction: column;
+
         .input-field {
-          color: #555;
-          font-size: 14px;
-          padding: 8px;
-          border-radius: 5px;
-          border: 1px solid #efefef;
+          font-size: 16px;
+          min-height: 47px;
+          padding: 6px 16px;
+          border-radius: 4px;
+          border: 1px solid #f1f0f0;
           outline: none;
-          width: 100%;
+          background-color: transparent;
+          color: #475569;
         }
         .input-full-width {
-          color: #555;
-          font-size: 14px;
-          width: 100%;
-          padding: 8px;
-          border-radius: 5px;
-          border: 1px solid #efefef;
+          font-size: 16px;
+          min-height: 47px;
+          padding: 6px 16px;
+          border-radius: 4px;
+          border: 1px solid #f1f0f0;
           outline: none;
+          background-color: transparent;
+          color: #475569;
         }
 
         .textarea-field {
@@ -90,25 +58,76 @@
         }
       }
       .quote-button {
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-size: 20px;
         background-color: var(--button-bg-color);
-        color: white;
         padding: 24px;
-        border: none;
+        min-height: 47px;
+        font-weight: 500;
+        line-height: 1.8em;
         border-radius: 100px;
-        font-size: 16px;
+        border-style: none;
         cursor: pointer;
-        width: 200px;
-        margin-top: 10px;
         transition: var(--button-transition);
+        width: 60%;
+        /* margin-top: 10px; */
       }
-      .quote-button:hover{
+      .quote-button:hover {
         background-color: var(--button-hover-bg-color);
       }
     }
   }
+  .first-section {
+    max-width: 500px;
+    margin-left: 35px;
+    .section-title {
+      font-size: 48.83px;
+      font-weight: 700;
+      font-style: normal;
+      line-height: 1.1em;
+      letter-spacing: -2px;
+      color: #fa721b;
+      br{
+        display: none;
+      }
+    }
+    .section-description {
+      color: #ffffff;
+      font-family: "Manrope", sans-serif;
+      font-size: 17px;
+      font-weight: 500;
+      font-style: normal;
+      line-height: 1.8em;
+      margin: 0px;
+      max-width: 460px;
+      text-align: justify;
+    }
 
-  .image-section {
-    flex: 1;
+    .tick-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 1px;
+      .tick-content {
+        /* padding: 10px; */
+        h3 {
+          color: #ffffff;
+          font-size: 25px;
+          font-weight: 700;
+          line-height: 1.4em;
+          letter-spacing: -1px;
+          margin-bottom: 10px;
+          /* margin: 0px; */
+        }
+        p {
+          text-align: left;
+          line-height: 1.8em;
+          font-size: 16px;
+          color: #7886a2;
+        }
+      }
+    }
   }
 }
 
@@ -117,22 +136,30 @@
     flex-direction: column;
     align-items: center;
     width: 97%;
-    padding: 0 0 60px 10px;
-    /* padding: 0 0 60px 0px; */
+    padding: 0 0px 40px 10px;
+    gap: 2px;
+    
+    .image-section {
+      display: none;
+    }
     .first-section {
+      order: 1;
       margin-left: 0px;
+      padding-right:10px;
       .section-title {
-        font-size: 35px;
+        font-size: 39.81px;
+        br{
+          display: block;
+        }
       }
       .section-description {
         margin-top: 15px;
         margin-bottom: 20px;
-        font-size: 21px;
       }
       .tick-item {
         flex-direction: column;
         align-items: flex-start;
-        gap: 7px;
+        gap: 1px;
         .tick-content {
           padding: 0px;
           p {
@@ -146,10 +173,14 @@
     }
 
     .form-section {
+      order: 2;
       height: auto;
-      width: 70%;
-      padding: 30px;
+      width: 90%;
+      padding: 20px 0;
+      margin-right: 20px;
       .quote-form {
+        border-radius: 20px;
+        padding: 10px 20px 20px 20px;
         h2 {
           font-weight: 900;
           font-size: 22px;
@@ -167,12 +198,12 @@
         }
         .quote-button {
           width: 100%;
+          padding: 20px;
+          margin-top: 20px;
         }
       }
     }
 
-    .image-section {
-      display: none;
-    }
+  
   }
 }

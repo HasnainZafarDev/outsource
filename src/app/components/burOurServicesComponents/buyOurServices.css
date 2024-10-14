@@ -36,14 +36,20 @@
       .card-title {
         font-size: 24px;
         font-weight: 700;
+        line-height: 1.4em;
+        letter-spacing: -1px;
         margin-bottom: 12px;
       }
       p {
-        font-size: 18px;
-        font-weight: 400;
+        font-family: "Manrope", sans-serif;
+        line-height: 1.8em;
+        font-size: 17px;
+        font-weight: 500;
       }
     }
     .buy-now-button {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.8em;
       padding: 12px 30px;
       font-size: 16px;
       font-weight: 600;

@@ -12,7 +12,7 @@ export default function Home() {
     <>
       {/* <div className="container"> */}
       <HomeSection />
-      <CompanyStats />
+      {/* <CompanyStats /> */}
       <TaxiBookingDispatcher />
       <Features />
       <FeaturesImages />

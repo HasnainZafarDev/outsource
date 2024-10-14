@@ -45,6 +45,7 @@ const CompanyStats = () => {
       >
         <Image
           src="/woman-in-headset.jpg"
+          // src="/random.jpg"
           alt="Company Image"
           className="image"
           height={512}

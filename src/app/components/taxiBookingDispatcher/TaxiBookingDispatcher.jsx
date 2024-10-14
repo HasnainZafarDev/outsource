@@ -1,141 +1,86 @@
 "use client";
 import React from "react";
 import "./taxiBookingDispatcher.css";
-import Link from "next/link";
 import Image from "next/image";
-
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import CountUp from "react-countup";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 const TaxiBookingDispatcher = () => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
-
-  const cardTopVariants = {
-    hidden: { opacity: 0, x: -100 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    },
-  };
-
-  const card1Variants = {
+  const cardVariants = (index) => ({
     hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.8,
+        duration: 0.4,
         ease: "easeOut",
+        delay: index * 0.3,
       },
     },
-  };
-  const card2Variants = {
-    hidden: { opacity: 0, y: 100 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-        delay: 0.3,
-      },
-    },
-  };
+  });
+  const cardsTitles = [
+    { title: "Taxi Dispatcher" },
+    { title: "Taxi Operator" },
+    { title: "CCTV Surveillance" },
+    { title: "National Touch" },
+    { title: "24/7 Availability" },
+    { title: "Cost-Effective" },
+  ]
 
   return (
     <div className="taxi-booking-dispatcher">
-      <div className="left-side">
-        <div className="image-container">
-          <Image
-            className="dispatcher-image"
-            src="/executive-in-call-center.jpg"
-            width={437}
-            height={600}
-            alt="taxi"
-            style={{ borderRadius: "8px" }}
-          />
-
-          <motion.div
-            className="card-top"
-            ref={ref}
-            initial="hidden"
-            variants={cardTopVariants}
-            animate={inView ? "visible" : "hidden"}
-          >
-            <h1>
-              {inView && (
-                <CountUp start={0} end={10} duration={2} decimals={0} />
-              )}
-            </h1>
-            <p>
-              YEARS OF
-              <br />
-              EXPERIENCE
-            </p>
-          </motion.div>
-
-          <div className="card-bottom">
-            <h3>Humanized call center</h3>
-            <p>
-              We deliver personalized support with empathetic customer service.
-            </p>
-          </div>
-        </div>
-      </div>
-
       <div className="right-side">
         <p className="title">TAXI BOOKING AND DISPATCHING</p>
         <h2 className="subtitle">
-          Efficient Taxi Booking and Dispatching Solutions by Lets Outsource!
+          Taxi Booking and Dispatch Outsouring Solutions by Lets Outsource!
         </h2>
         <p className="description">
-          At Lets Outsource Ltd, we specialize in efficient taxi booking and
-          dispatching solutions tailored to meet your business needs. Our
-          services streamline operations, ensuring fast and reliable
-          transportation for your customers. With our advanced technology and
-          dedicated support, we handle everything from booking to dispatch, so
-          you can focus on growing your business while we take care of the
-          operations.
+          By choosing Lets Outsource for your taxi booking and dispatching
+          needs, you can enhance efficiency and reduce operational costs. Our
+          dedicated team specializes in outsourcing, providing experienced
+          dispatchers and operators to handle the complexities of transportation
+          logistics. This allows you to focus on your core business while we
+          ensure seamless, reliable services that improve customer satisfaction
+          and streamline your operations.
         </p>
 
         <motion.div className="cards">
-          <motion.div
-            className="card"
-            ref={ref}
-            initial="hidden"
-            variants={card1Variants}
-            animate={inView ? "visible" : "hidden"}
-          >
-            <span className="card-number">.01</span>
-            <h3>Low cost</h3>
-            <p>We offer services at a low cost of just per hour. </p>
-            <br />
-            <Link href="/about" className="read-more">
-              Read More
-            </Link>
-          </motion.div>
-
-          <motion.div
-            className="card"
-            ref={ref}
-            initial="hidden"
-            variants={card2Variants}
-            animate={inView ? "visible" : "hidden"}
-          >
-            <span className="card-number">.02</span>
-            <h3>National Touch</h3>
-            <p>Fluent English communication, just like a local 🙂</p>
-            <br />
-            <Link href="/about" className="read-more">
-              Read More
-            </Link>
-          </motion.div>
+          {cardsTitles.map((card, index) => {
+            const [ref, inView] = useInView({
+              triggerOnce: true,
+              threshold: 0.2,
+            });
+            return (
+              <motion.div
+                key={index}
+                className="card"
+                ref={ref}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                variants={cardVariants(index)}
+              >
+                <span className="card-number">
+                  <IoMdCheckmarkCircleOutline />
+                </span>
+                <h3>{card.title}</h3>
+              </motion.div>
+            );
+          })}
         </motion.div>
+      </div>
+
+      <div className="left-side">
+        <div className="image-container">
+          <div className="circle"></div>
+          <Image
+            src="/women.png"
+            alt="Outsourcing"
+            className="home-image"
+            width={437}
+            height={700}
+          />
+        </div>
       </div>
     </div>
   );

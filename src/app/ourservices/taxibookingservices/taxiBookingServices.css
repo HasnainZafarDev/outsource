@@ -1,6 +1,6 @@
 .taxi-booking-container {
   background: linear-gradient(135deg, #fefefe8f, #c4c5c6bd);
-  color: #333;
+  color: #1a1f2f;
   padding: 40px 40px 60px 100px;
 
   .taxi-header {
@@ -42,12 +42,16 @@
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease-in-out;
         cursor: pointer;
-        h3{
-          font-family: fantasy;
-          font-weight: normal;
+        h3 {
+          font-weight: 600;
+          letter-spacing: -2px;
+          line-height: 1.2em;
         }
         p {
-          color: #979696;
+          font-size: 17px;
+          font-weight: 500;
+          color: #1a1f2f;
+          line-height: 1.8em;
         }
         .feature-icon {
           font-size: 2.5rem;
@@ -89,8 +93,8 @@
           display: block;
           font-size: 1.8rem;
           color: var(--button-bg-color);
-          font-weight: 600;
-          font-family: fantasy;
+          font-weight: 700;
+          font-size: 39.06px;
           margin-bottom: 0.5rem;
         }
       }
@@ -108,11 +112,9 @@
     .testimonials-container {
       display: flex;
       gap: 20px;
-      /* justify-content: space-between; */
       margin-top: 2rem;
       .testimonial {
-        /* background-color: white; */
-        color: #979696;
+        color: transparent;
         background-color: transparent;
         padding: 20px;
         margin-left: 16px;
@@ -120,7 +122,7 @@
         /* width: 350px; */
         width: 50%;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        strong{
+        strong {
           color: black;
         }
       }
@@ -180,7 +182,7 @@
           background-color: transparent;
           margin-left: 0px;
           width: 40%;
-          strong{
+          strong {
             color: black;
           }
         }

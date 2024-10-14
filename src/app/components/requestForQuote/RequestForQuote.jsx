@@ -6,10 +6,47 @@ const RequestForQuote = () => {
   return (
     <div className="request-quote-section">
       {/* First Section */}
+      <div className="image-section">
+        <Image
+          src="/woman-standing.png"
+          alt="Request For Quote"
+          width={420}
+          height={640}
+          style={{ marginBottom: "-5px" }}
+        />
+      </div>
 
+      {/* Second Section: Form */}
+      <div className="form-section">
+        <form className="quote-form">
+          <h2>REQUEST FOR A QUOTE</h2>
+          <div className="input-row">
+            <input type="text" placeholder="Name" className="input-field" />
+            <input type="email" placeholder="Email" className="input-field" />
+          </div>
+          <div className="input-row">
+            <input
+              type="text"
+              placeholder="Subject"
+              className="input-full-width"
+            />
+          </div>
+          <div className="input-row">
+            <textarea
+              placeholder="Message"
+              className="input-full-width textarea-field"
+            ></textarea>
+          </div>
+          <button type="submit" className="quote-button">
+            SEND MESSAGE
+          </button>
+        </form>
+      </div>
+
+      {/* Third Section*/}
       <div className="first-section">
         <h1 className="section-title">
-          See Why You Should Choose LetsOutsource
+          See Why You Should Choose <br />LetsOutsource
         </h1>
         <p className="section-description">
           Lets Outsource provides efficient outsourcing solutions for taxi
@@ -53,44 +90,6 @@ const RequestForQuote = () => {
             </p>
           </div>
         </div>
-      </div>
-
-      {/* Second Section: Form */}
-      <div className="form-section">
-        <form className="quote-form">
-          <h2>REQUEST FOR A QUOTE</h2>
-          <div className="input-row">
-            <input type="text" placeholder="Name" className="input-field" />
-            <input type="email" placeholder="Email" className="input-field" />
-          </div>
-          <div className="input-row">
-            <input
-              type="text"
-              placeholder="Subject"
-              className="input-full-width"
-            />
-          </div>
-          <div className="input-row">
-            <textarea
-              placeholder="Message"
-              className="input-full-width textarea-field"
-            ></textarea>
-          </div>
-          <button type="submit" className="quote-button">
-            SEND MESSAGE
-          </button>
-        </form>
-      </div>
-
-      {/* Third Section: Image */}
-      <div className="image-section">
-        <Image
-          src="/woman-standing.png"
-          alt="Request For Quote"
-          width={420}
-          height={600}
-          style={{ marginBottom: "-5px" }}
-        />
       </div>
     </div>
   );

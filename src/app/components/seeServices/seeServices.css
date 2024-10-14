@@ -14,7 +14,7 @@
   overflow: hidden;
 
   .card {
-    max-width: 442px;
+    max-width: 482px;
     background-color: white;
     padding: 40px;
     border-radius: 8px 8px 80px 8px;
@@ -23,23 +23,37 @@
     top: 0px;
     z-index: 2;
     h1 {
-      font-size: 26px;
-      font-weight: 800;
+      color: #1a1f2f;
+      font-size: 39.06px;
+      font-family: 700;
+      line-height: 1.2em;
+      letter-spacing: -2px;
+      font-style: normal;
     }
     p {
-      font-size: 16px;
-      color: #555;
+      font-family: "Manrope", sans-serif;
+      font-size: 17px;
+      font-weight: 500;
+      font-style: normal;
+      line-height: 1.8em;
+      color: #7886a2;
     }
 
     .services-btn {
+      color: #ffffff;
+      font-family: "Poppins", sans-serif;
+      font-size: 20px;
       background-color: var(--button-bg-color);
-      color: white;
-      padding: 20px;
-      margin-top: 20px;
-      border: none;
-      border-radius: 50px;
+      padding: 20px 40px;
+      min-height: 47px;
+      font-weight: 500;
+      font-style: normal;
+      line-height: 1.8em;
+      border-radius: 100px;
+      border-style: none;
       cursor: pointer;
       transition: var(--button-transition);
+      width: auto;
     }
     .services-btn:hover {
       background-color: var(--button-hover-bg-color);
@@ -49,23 +63,27 @@
 
 @media (max-width: 972px) {
   .services-section {
-    opacity: 85%;
     width: 100%;
     height: 70vh;
     background-size: auto;
     background-position: 28% 80%;
     .card {
-      /* if it then give some issue so remove height  */
       top: 3px;
       left: 35px;
-      width: 65%;
+      width: 73%;
       height: auto;
+      padding: 30px;
+      border-radius:  10px 10px 60px 10px;
       h1 {
-        font-size: 23px;
-       
+        font-size: 33.1px;
+        max-width: 390px;
+        br{
+          display: none;
+        }
       }
       p {
-        font-size: 22px;
+        font-size: 17px;
+        max-width: 390px;
       }
       .services-btn {
         margin: 0;

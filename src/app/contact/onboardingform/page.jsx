@@ -5,21 +5,14 @@ import Confirmation from "./Confirmation";
 
 const OnboardingForm = () => {
   const vehicleOptions = [
-    "Saloon Car",
+    "Saloon Vehicle",
     "SUVs",
-    "Estate",
+    "Estate Vehicle",
     "MPV",
-    "Skoda Octavia",
-    "MG 5",
-    "Toyota Corolla",
-    "Kia Niro EV",
-    "Volkswagen Touran",
-    "Ford Grand",
-    "Mercedes",
-    "Volkswagen Multivan",
+    "Mini Bus",
     "6 Seater",
     "8 Seater",
-    "WheelChair Affordable",
+    "WheelChair Accessible",
   ];
   const initialState = {
     companyName: "",
@@ -523,10 +516,6 @@ const OnboardingForm = () => {
         <p>
           Website:{" "}
           <a href="http://www.letsoutsource.co.uk">www.letsoutsource.co.uk</a>{" "}
-          <br />{" "}
-          <a href="http://www.letsoutsource.co.uk" className="website-tag">
-            www.letsoutsource.co.uk
-          </a>
         </p>
         <p>
           Email:{" "}

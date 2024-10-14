@@ -1,14 +1,24 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./navbar.css";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { FaBars, FaTimes } from "react-icons/fa"; 
+import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { useVideoContext } from "@/app/context/videoContext";
 
 const Navbar = () => {
+  const { currentVideo } = useVideoContext();
   const pathname = usePathname();
+  const [navClass, setNavClass] = useState("");
+  useEffect(() => {
+    if (pathname == "/") {
+      setNavClass(currentVideo === 0 ? "video1" : "video2");
+    } else {
+      setNavClass("");
+    }
+  },[pathname, currentVideo]);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const isActive = (path) => pathname === path;
@@ -16,17 +26,19 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-
   return (
-    <nav className="navbar">
+    // <nav className={`navbar ${navbarClass}`}>
+    <nav className={`navbar ${navClass}`}>
       <div className="navbar-logo">
         <Link href="/">
           <Image
             src="/logo.png"
             alt="Logo"
             className="logo"
-            height={50}
-            width={150}
+            // height={50}
+            // width={150}
+            height={70}
+            width={190}
           />
         </Link>
       </div>
@@ -117,10 +129,10 @@ const Navbar = () => {
                 Customer Support
               </Link>
               <Link href="/ourservices/emailsupport" onClick={toggleMenu}>
-                Email Support Services
+                Email Support
               </Link>
               <Link href="/ourservices/career" onClick={toggleMenu}>
-                Remote Staff Hiring
+                Career
               </Link>
             </div>
           </div>

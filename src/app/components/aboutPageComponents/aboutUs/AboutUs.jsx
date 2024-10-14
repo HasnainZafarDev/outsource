@@ -51,7 +51,7 @@ const AboutUs = () => {
       id: 5,
       title: "Sales Services",
       description:
-        "Boost your business growth with our comprehensive sales services. At Lets Outsource, we provide tailored sales strategies that align with your business objectives. Our team of experienced sales professionals works closely with you to understand your target market and deliver results-driven solutions. From lead generation to closing deals, we are helping you to achieve your sales goals efficiently and effectively.",
+        "Boost your business with our expert sales services at Lets Outsource. We offer customized sales strategies designed to meet your specific business goals. Our experienced sales professionals collaborate with you to identify your target market and implement solutions that drive results. From generating leads to closing deals, we ensure you achieve your sales objectives efficiently, helping your business thrive in a competitive market.",
       image: "/sale-service.png",
       readMoreDescription:
         "Lets Outsource provides a complete range of sales services designed to drive revenue and accelerate growth for your business. Our approach is not one-size-fits-all; we tailor each strategy to fit your specific market needs and business objectives. Our expert sales team conducts in-depth market analysis, identifying key opportunities and challenges that are unique to your industry. We offer services ranging from lead generation and sales funnel optimization to full-service management of your entire sales cycle. Whether you're looking to increase customer acquisition, boost retention rates, or penetrate new markets, our sales professionals work closely with your team to deliver measurable results and sustainable growth.",
@@ -60,7 +60,7 @@ const AboutUs = () => {
       id: 6,
       title: "Common Questions",
       description:
-        "We understand that you may have questions about our services and how we operate. Our Common Questions section is designed to provide you with quick and clear answers to the most frequently asked questions. Whether you're curious about our processes, pricing, or service offerings, you'll find all the information you need right here. If you don’t see your question answered, our customer service team is always ready to assist.",
+        "We understand that you may have questions about our services and how we operate. Our Common Questions section is designed to provide you with quick and clear answers to the most frequently asked questions. Whether you're curious about our processes, pricing, or services,you'll find all the information you need right here. If you don’t see your question answered, our customer service team is always ready to assist.",
       image: "/faq.png",
       readMoreDescription:
         "At Lets Outsource, we prioritize transparency in all aspects of our services. Our Common Questions section is designed to provide you with quick and easy access to the most frequently asked queries about our offerings. Covering topics such as service scope, pricing models, turnaround times, and data security measures, this section is your go-to resource for understanding how we operate. If you have specific concerns about how outsourcing can benefit your business, or how we safeguard sensitive information, you’ll find comprehensive answers here. In case your question is not listed, our team is always on hand to provide personalized responses and further clarification.",

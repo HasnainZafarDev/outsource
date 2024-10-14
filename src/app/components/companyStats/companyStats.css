@@ -22,12 +22,14 @@
     text-align: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     h3 {
-      font-size: 20px;
-      margin-bottom: 15px;
+      /* font-size: 20px; */
+      font-size: 25px;
+      /* margin-bottom: 15px; */
       color: #fa721b;
       z-index: 1;
       font-family: fantasy;
       font-weight: normal;
+      /* font-weight: bold; */
     }
     h1 {
       font-size: 50px;
@@ -36,10 +38,11 @@
       z-index: 1;
     }
     p {
-      font-family: fantasy;
+      /* font-family: fantasy; */
       font-size: 18px;
       /* color: #b3b3b3; */
-      color: #333;
+      /* color: #333; */
+      color: #7886a2;
       z-index: 1;
       /* max-width: 500px; */
     }

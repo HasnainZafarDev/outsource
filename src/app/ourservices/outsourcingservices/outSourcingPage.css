@@ -1,6 +1,6 @@
 .outsource-container {
   background: linear-gradient(135deg, #fefefe8f, #c4c5c6bd);
-  color: #333;
+  color: #1a1f2f;
   padding: 40px 40px 60px 100px;
 
   .outsource-header {
@@ -13,7 +13,7 @@
     }
     .subtitle {
       font-size: 30px;
-      color: #555;
+      color: #7886a2;
       margin-top: 1rem;
     }
   }
@@ -43,11 +43,15 @@
         transition: all 0.3s ease-in-out;
         cursor: pointer;
         h3{
-          font-family: fantasy;
-          font-weight: normal;
+          font-weight: 600;
+          letter-spacing: -2px;
+          line-height: 1.2em;
         }
         p {
-          color: #979696;
+          font-size: 17px;
+          font-weight: 500;
+          color: #1a1f2f;
+          line-height: 1.8em;
         }
         .feature-icon {
           font-size: 2.5rem;
@@ -90,7 +94,9 @@
           display: block;
           font-size: 1.8rem;
           color: var(--button-bg-color);
-          font-weight: 600;
+          font-weight: 700;
+          font-size: 39.06px;
+          letter-spacing: -2px;
           margin-bottom: 0.5rem;
         }
       }
@@ -112,7 +118,7 @@
       margin-top: 2rem;
       .testimonial {
         /* background-color: white; */
-        color: #979696;
+        color: transparent;
         background-color: transparent;
         padding: 20px;
         margin-left: 16px;
