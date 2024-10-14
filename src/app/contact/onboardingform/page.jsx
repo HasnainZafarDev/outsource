@@ -45,8 +45,8 @@ const OnboardingForm = () => {
     vehicleCounts: {},
     vehiclePreferences: "",
   };
+  
   const [formData, setFormData] = useState(initialState);
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [feedbackMessage, setFeedbackMessage] = useState("");
   const [isConfirmed, setIsConfirmed] = useState(false);
@@ -443,6 +443,7 @@ const OnboardingForm = () => {
                   {vehicleOptions.map((vehicle) => (
                     <div key={vehicle} className="vehicle-checkbox">
                       <label htmlFor={vehicle}>{vehicle}</label>
+                      
                       <input
                         type="checkbox"
                         id={vehicle}

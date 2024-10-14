@@ -3,9 +3,10 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ServiceModal = ({ isOpen, onClose, service }) => {
+  
   const [description, setDescription] = useState("");
-  const [hours, setHours] = useState("");
-  const [days, setDays] = useState("");
+  const [hours, setHours] = useState("0");
+  const [days, setDays] = useState("0");
   const [agreed, setAgreed] = useState(false);
   const hourlyRate = service?.hourlyRate || 100;
 
@@ -24,10 +25,37 @@ const ServiceModal = ({ isOpen, onClose, service }) => {
     const totalHours = parseInt(hours) + parseInt(days) * 24;
     return totalHours * hourlyRate;
   };
+
   const modalVariants = {
     hidden: { opacity: 0, y: 100 },
     visible: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: 100 },
+  };
+
+  const renderHourOptions = () => {
+    const options = [];
+    for (let i = 0; i < 25; i++) {
+      options.push(
+        <option key={i} value={i}>
+          {/* {i} hours */}
+          {i}
+        </option>
+      );
+    }
+    return options;
+  };
+
+  const renderDayOptions = () => {
+    const options = [];
+    for (let i = 0; i <= 30; i++) {
+      options.push(
+        <option key={i} value={i}>
+          {/* {i} days */}
+          {i} 
+        </option>
+      );
+    }
+    return options;
   };
 
   return (
@@ -64,20 +92,26 @@ const ServiceModal = ({ isOpen, onClose, service }) => {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               />
-              <input
-                type="number"
-                className="modal-input"
-                placeholder="Number of Hours"
+
+              <label htmlFor="modal-select">Number Of Hour
+              <select
+                className="modal-select"
                 value={hours}
                 onChange={(e) => setHours(e.target.value)}
-              />
-              <input
-                type="number"
-                className="modal-input"
-                placeholder="Number of Days"
+              >
+                {renderHourOptions()}
+              </select>
+              </label>
+              
+              <label htmlFor="modal-select">Number Of Days
+              <select
+                className="modal-select"
                 value={days}
                 onChange={(e) => setDays(e.target.value)}
-              />
+              >
+                {renderDayOptions()}
+              </select>
+              </label>
 
               <div className="modal-price-card">
                 <div className="modal-price-details">

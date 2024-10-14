@@ -38,22 +38,24 @@
 
     .cards {
       display: flex;
-      gap: 20px;
+      gap: 18px;
       margin-top: 40px;
       flex-wrap: wrap;
       .card {
         background-color: transparent;
         border-left: 6px solid #fa721b;
-        padding: 20px;
+        padding: 20px 0px 20px 20px;
         border-radius: 8px;
-        width: 428px;
+        width: 390px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         display: flex;
         align-items: center;
         gap: 10px;
         h3 {
           color: #1a1f2f;
+          font-family: "Jost",sans-serif;
           font-size: 25px;
+          font-weight: 600;
           margin: 0px;
           text-align: center;
         }
@@ -125,22 +127,10 @@
         gap: 30px;
         .card {
           width: 92%;
-          padding: 20px 9px 20px 9px;
+          padding: 20px 0px 20px 9px;
           h3 {
-            font-family: fantasy;
-            font-weight: normal;
+           
           }
-          p {
-            font-size: 20px;
-            color: #7a7878;
-            font-family: fantasy;
-          }
-        }
-        .card-number {
-          font-family: fantasy;
-        }
-        .read-more {
-          font-family: fantasy;
         }
       }
     }

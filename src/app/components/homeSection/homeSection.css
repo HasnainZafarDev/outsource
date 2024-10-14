@@ -102,28 +102,36 @@
 
 @media (max-width: 972px) {
   .home-section {
+    height: 70vh;
     .home-content {
       flex-direction: column;
       align-items: center;
       padding: 10px 10px 120px 10px;
 
       /* padding: 10px 0px 60px 0px; */
+      .background-video{
+        top: 101px;
+      }
       .text-content {
         margin-left: 0px;
         .heading {
           font-size: 15px;
         }
         .subheading {
-          font-size: 39.06px;
+          font-size: 35.18px;
           br{
             display: none;
           }
         }
         .paragraph1 {
-          font-size: 26px;
+          font-size: 17px;
+          max-width: 410px;
         }
         .paragraph2 {
-          display: none;
+          
+          font-size: 17px;
+          max-width: 410px;
+          /* display: none; */
         }
         .quote-button {
           padding: 22px;
