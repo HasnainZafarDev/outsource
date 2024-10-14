@@ -1,6 +1,7 @@
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
-import { VideoProvider } from "./context/videoContext";
+
+import { VideoProvider } from "./context/VideoContext";
 import "./globals.css";
 export const metadata = {
   title: "Let's OutSource",

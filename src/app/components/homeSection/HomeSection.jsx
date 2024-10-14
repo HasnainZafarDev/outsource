@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import "./homeSection.css";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useVideoContext } from "../../context/videoContext";
+// import { useVideoContext } from "../../../context/VideoContext";
+import { useVideoContext } from "../../context/VideoContext";
+
 import { useRouter } from "next/navigation";
 
 const HomeSection = () => {
