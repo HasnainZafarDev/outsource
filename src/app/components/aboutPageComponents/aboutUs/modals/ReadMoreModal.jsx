@@ -21,6 +21,7 @@ const Modal = ({ isOpen, onClose, cardData }) => {
         <button className="modal-close-icon" onClick={onClose}>
           &times;
         </button>
+        {icon && 
         <Image
           src={icon}
           alt="Card Icon"
@@ -28,6 +29,7 @@ const Modal = ({ isOpen, onClose, cardData }) => {
           height={100}
           className="modal-icon"
         />
+      }
         <div className="modal-body">
           <p className="modal-text">{content}</p>
         </div>

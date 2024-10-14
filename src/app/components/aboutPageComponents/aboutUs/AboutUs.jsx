@@ -107,7 +107,6 @@ const AboutUs = () => {
     <div className="about-us-container">
       {/* Top Section */}
       <div className="top-section">
-        
         <div className="about-us-left">
           <h1 className="about-title">About Lets Outsource</h1>
           <p className="about-para">
