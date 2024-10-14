@@ -6,7 +6,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { useVideoContext } from "@/app/context/videoContext";
+import { useVideoContext } from "../../context/videoContext";
 
 const Navbar = () => {
   const { currentVideo } = useVideoContext();

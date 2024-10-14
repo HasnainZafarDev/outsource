@@ -1,4 +1,3 @@
-import CompanyStats from "./components/companyStats/CompanyStats";
 import Features from "./components/features/Features";
 import FeaturesImages from "./components/features/WhiteBackgroundComponent";
 import HomeSection from "./components/homeSection/HomeSection";
@@ -12,7 +11,6 @@ export default function Home() {
     <>
       {/* <div className="container"> */}
       <HomeSection />
-      {/* <CompanyStats /> */}
       <TaxiBookingDispatcher />
       <Features />
       <FeaturesImages />
