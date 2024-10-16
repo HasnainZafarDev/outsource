@@ -63,7 +63,6 @@
         font-size: 16px;
         outline: none;
         background: #f9f9f9;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       }
       .modal-select {
         width: 100%;
@@ -75,7 +74,6 @@
         font-size: 16px;
         outline: none;
         background: #f9f9f9;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       }
       .modal-textarea::placeholder,
       .modal-input::placeholder {
