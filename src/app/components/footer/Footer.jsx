@@ -87,7 +87,7 @@ const Footer = () => {
           <h2>More Links</h2>
           <div className="section-links">
             <li>
-              <Link href="/contact/livechatsupport">Live Chat Support</Link>
+              <Link href="/ourservices/livechatsupport">Live Chat Support</Link>
             </li>
             <li>
               <Link href="/ourservices/emailsupport">Email support</Link>
