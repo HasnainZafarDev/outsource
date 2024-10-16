@@ -12,7 +12,8 @@
       justify-content: space-between;
       padding: 60px 60px 0px 0px;
       /* margin: 50px; */
-      margin: 50px 50px 50px 81px;
+      /* margin: 50px 50px 50px 81px; */
+      margin: 50px 50px 50px 41px;
       border-radius: 10px;
       border-bottom: 8px solid #fa721b;
 
@@ -152,8 +153,8 @@
         .card-left {
           align-items: end;
           .contact-image {
-            width: 150px;
-            height: 280px;
+            width: 160px;
+            height: 350px;
           }
         }
         .card-right {

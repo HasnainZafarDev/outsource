@@ -7,7 +7,7 @@
     justify-content: center;
     .left-content {
       background-color: #1a1f2f;
-      padding: 15px 0px 0 86px;
+      padding: 15px 0px 0 50px;
       border-top-right-radius: 40px;
       width: 80%;
       .small-title {
@@ -50,7 +50,7 @@
     background-color: #1a1f2f;
     display: flex;
     height: 400px;
-    padding: 0 75px 50px 87px;
+    padding: 0 0px 50px 50px;
     gap: 40px 40px;
     .card {
       color: white;

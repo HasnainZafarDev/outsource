@@ -29,13 +29,16 @@
         line-height: 1.8em;
       }
       .large-screen-description-privacy {
-        color: #ffffff;
-        font-family: "Manrope", sans-serif;
-        font-size: 15px;
-        margin-left: 75px;
-      }
-      .large-screen-description-privacy span:hover {
-        color: #fa721b;
+        margin-left: 60px;
+        .privacy-link {
+          text-decoration: none;
+          color: #ffffff;
+          font-family: "Manrope", sans-serif;
+          font-size: 15px;
+        }
+        .privacy-link:hover {
+          color: #fa721b;
+        }
       }
       .footer-social {
         display: flex;
@@ -122,11 +125,16 @@
       }
       .small-screen-description-privacy {
         display: block;
-        text-align: center;
-        color: #fa721b;
-      }
-      .small-screen-description-privacy span:hover {
-        color: #ffffff;
+        .privacy-link {
+          color: #fa721b;
+          text-decoration: none;
+
+          font-family: "Manrope", sans-serif;
+          font-size: 15px;
+        }
+        .privacy-link:hover {
+          color: #ffffff;
+        }
       }
     }
   }

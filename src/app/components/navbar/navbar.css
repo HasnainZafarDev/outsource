@@ -4,8 +4,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 100px;
-  margin-right: 64px;
+  /* margin-left: 100px; */
+  margin-left: 50px;
+  margin-right: 67px;
   &.video1 {
     .navbar-links {
       .dropdown{

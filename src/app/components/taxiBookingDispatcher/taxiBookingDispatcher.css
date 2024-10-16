@@ -2,7 +2,8 @@
   display: flex;
   gap: 49px;
   background-color: #ffffff;
-  padding: 20px 50px 0px 90px;
+  padding: 20px 50px 0px 50px;
+
   margin-top: 50px;
   margin-bottom: -8px;
 
@@ -46,7 +47,7 @@
         border-left: 6px solid #fa721b;
         padding: 20px 0px 20px 20px;
         border-radius: 8px;
-        width: 390px;
+        width: 440px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         display: flex;
         align-items: center;

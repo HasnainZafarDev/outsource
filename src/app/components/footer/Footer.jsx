@@ -7,7 +7,6 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        
         <div className="description">
           <h2>
             <span>Lets</span>Outsource
@@ -40,7 +39,13 @@ const Footer = () => {
             </Link>
           </div>
           <p className="large-screen-description-privacy">
-            <span>Privacy Policy</span> | <span>Terms & Conditions</span>
+            <Link href="/privacypolicy" className="privacy-link">
+              Privacy Policy
+            </Link>
+            <span> | </span>
+            <Link href="terms&conditions" className="privacy-link">
+              Terms & Conditions
+            </Link>
           </p>
         </div>
 
@@ -63,13 +68,17 @@ const Footer = () => {
           <h2>Service</h2>
           <div className="section-links">
             <li>
-              <Link href="/ourservices/taxibookingservices">Taxi Booking Services</Link>
+              <Link href="/ourservices/taxibookingservices">
+                Taxi Booking Services
+              </Link>
             </li>
             <li>
               <Link href="/ourservices/customersupport">Customer Service</Link>
             </li>
             <li>
-              <Link href="/ourservices/outsourcingservices">Outsourcing services</Link>
+              <Link href="/ourservices/outsourcingservices">
+                Outsourcing services
+              </Link>
             </li>
           </div>
         </div>
@@ -93,18 +102,49 @@ const Footer = () => {
           <h2>Official Partners</h2>
           <div className="partners-logos">
             <div className="partners-row">
-              <Image src="/taxi1.png" alt="Partner 1 Logo" className="partner-logo" height={100} width={100} />
-              <Image src="/taxi2.png" alt="Partner 2 Logo" className="partner-logo" height={100} width={100}/>
+              <Image
+                src="/taxi1.png"
+                alt="Partner 1 Logo"
+                className="partner-logo"
+                height={100}
+                width={100}
+              />
+              <Image
+                src="/taxi2.png"
+                alt="Partner 2 Logo"
+                className="partner-logo"
+                height={100}
+                width={100}
+              />
             </div>
             <div className="partners-row">
-              <Image src="/taxi3.png" alt="Partner 3 Logo" className="partner-logo" height={100} width={100}/>
-              <Image src="/taxi4.png" alt="Partner 4 Logo" className="partner-logo" height={100} width={100}/>
+              <Image
+                src="/taxi3.png"
+                alt="Partner 3 Logo"
+                className="partner-logo"
+                height={100}
+                width={100}
+              />
+              <Image
+                src="/taxi4.png"
+                alt="Partner 4 Logo"
+                className="partner-logo"
+                height={100}
+                width={100}
+              />
             </div>
           </div>
         </div>
-        
+
         <p className="small-screen-description-privacy">
-          <span>Privacy Policy</span> | <span>Terms & Conditions</span>
+          {/* <span>Privacy Policy</span> | <span>Terms & Conditions</span> */}
+          <Link href="/privacypolicy" className="privacy-link">
+            Privacy Policy
+          </Link>
+          <span> | </span>
+          <Link href="terms&conditions" className="privacy-link">
+            Terms & Conditions
+          </Link>
         </p>
       </div>
     </footer>

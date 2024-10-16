@@ -10,8 +10,8 @@ const RequestForQuote = () => {
         <Image
           src="/woman-standing.png"
           alt="Request For Quote"
-          width={420}
-          height={640}
+          width={450}
+          height={700}
           style={{ marginBottom: "-5px" }}
         />
       </div>

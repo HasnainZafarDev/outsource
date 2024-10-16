@@ -3,12 +3,15 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ServiceModal = ({ isOpen, onClose, service }) => {
-  
   const [description, setDescription] = useState("");
   const [hours, setHours] = useState("0");
   const [days, setDays] = useState("0");
   const [agreed, setAgreed] = useState(false);
-  const hourlyRate = service?.hourlyRate || 100;
+  const [selectedHourlyRate, setSelectedHourlyRate] = useState("1.5");
+  const [currency, setCurrency] = useState("USD");
+  const [isPaymentOpen, setIsPaymentOpen] = useState(false);
+
+  const exchangeRate = 280; // Dollar Rate
 
   useEffect(() => {
     if (isOpen) {
@@ -23,7 +26,8 @@ const ServiceModal = ({ isOpen, onClose, service }) => {
 
   const calculatePrice = () => {
     const totalHours = parseInt(hours) + parseInt(days) * 24;
-    return totalHours * hourlyRate;
+    const priceInUSD = totalHours * parseFloat(selectedHourlyRate);
+    return currency === "PKR" ? priceInUSD * exchangeRate : priceInUSD;
   };
 
   const modalVariants = {
@@ -32,7 +36,7 @@ const ServiceModal = ({ isOpen, onClose, service }) => {
     exit: { opacity: 0, y: 100 },
   };
 
-  const renderHourOptions = () => {
+  const hourOptions = () => {
     const options = [];
     for (let i = 0; i < 25; i++) {
       options.push(
@@ -45,17 +49,45 @@ const ServiceModal = ({ isOpen, onClose, service }) => {
     return options;
   };
 
-  const renderDayOptions = () => {
+  const dayOptions = () => {
     const options = [];
     for (let i = 0; i <= 30; i++) {
       options.push(
         <option key={i} value={i}>
           {/* {i} days */}
-          {i} 
+          {i}
         </option>
       );
     }
     return options;
+  };
+
+  const hourlyRateOptions = () => {
+    const options = [];
+    for (let i = 1.5; i <= 10.5; i += 1.0) {
+      options.push(
+        <option key={i} value={i}>
+          {i}
+        </option>
+      );
+    }
+    return options;
+  };
+  const currencyOptions = () => {
+    return (
+      <>
+        <option value="USD">USD</option>
+        <option value="PKR">PKR</option>
+      </>
+    );
+  };
+
+  const openPaymentModal = () => {
+    setIsPaymentOpen(true);
+  };
+
+  const closePaymentModal = () => {
+    setIsPaymentOpen(false);
   };
 
   return (
@@ -93,31 +125,60 @@ const ServiceModal = ({ isOpen, onClose, service }) => {
                 onChange={(e) => setDescription(e.target.value)}
               />
 
-              <label htmlFor="modal-select">Number Of Hour
+              <label htmlFor="modal-select">
+                Number Of Hour
+                <select
+                  className="modal-select"
+                  value={hours}
+                  onChange={(e) => setHours(e.target.value)}
+                >
+                  {hourOptions()}
+                </select>
+              </label>
+
+              <label htmlFor="modal-select">
+                Number Of Days
+                <select
+                  className="modal-select"
+                  value={days}
+                  onChange={(e) => setDays(e.target.value)}
+                >
+                  {dayOptions()}
+                </select>
+              </label>
+
+              <label htmlFor="hourly-rate-select">
+                Hourly Rate
+                <select
+                  className="modal-select"
+                  value={selectedHourlyRate}
+                  onChange={(e) => setSelectedHourlyRate(e.target.value)}
+                >
+                  {hourlyRateOptions()}
+                </select>
+              </label>
+
+              <label htmlFor="currency-select">Currency</label>
               <select
                 className="modal-select"
-                value={hours}
-                onChange={(e) => setHours(e.target.value)}
+                value={currency}
+                onChange={(e) => setCurrency(e.target.value)}
               >
-                {renderHourOptions()}
+                {currencyOptions()}
               </select>
-              </label>
-              
-              <label htmlFor="modal-select">Number Of Days
-              <select
-                className="modal-select"
-                value={days}
-                onChange={(e) => setDays(e.target.value)}
-              >
-                {renderDayOptions()}
-              </select>
-              </label>
 
               <div className="modal-price-card">
                 <div className="modal-price-details">
                   <h3 className="modal-price-title">Pricing Details</h3>
                   <p className="modal-price-item">
-                    <span>Hourly Rate:</span> <strong>${hourlyRate}</strong>
+                    <span>Hourly Rate:</span>{" "}
+                    <strong>
+                      {currency === "PKR"
+                        ? `${(
+                            parseFloat(selectedHourlyRate) * exchangeRate
+                          ).toFixed(2)}RS`
+                        : `$${selectedHourlyRate}`}
+                    </strong>
                   </p>
                   <p className="modal-price-item">
                     <span>Hours:</span> <strong>{hours || 0}</strong>
@@ -128,7 +189,11 @@ const ServiceModal = ({ isOpen, onClose, service }) => {
                   <hr />
                   <p className="modal-price-total">
                     <span>Total Price:</span>{" "}
-                    <strong>${calculatePrice() || 0}</strong>
+                    <strong>
+                      {currency === "PKR"
+                        ? `${calculatePrice().toFixed(2)} RS`
+                        : `$${calculatePrice().toFixed(2)}`}
+                    </strong>
                   </p>
                 </div>
               </div>
@@ -150,9 +215,56 @@ const ServiceModal = ({ isOpen, onClose, service }) => {
               </button>
               <button
                 className="modal-button proceed"
-                disabled={!agreed || !description || !hours || !days}
+                // disabled={!agreed || !description || !hours || !days}
+                onClick={openPaymentModal}
               >
                 Proceed to Payment
+              </button>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+      {/* Payment Modal */}
+      {isPaymentOpen && (
+        <motion.div
+          className="modal-overlay"
+          onClick={closePaymentModal}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <motion.div
+            className="modal-container"
+            onClick={(e) => e.stopPropagation()}
+            variants={modalVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            transition={{ duration: 0.3 }}
+          >
+            <div className="modal-header">
+              <h2 className="modal-title">Choose Payment Method</h2>
+              <button className="close-button" onClick={closePaymentModal}>
+                &times;
+              </button>
+            </div>
+
+            <div className="modal-body">
+              <button
+                className="paypal-button"
+                onClick={() => window.open("https://www.paypal.com", "_blank")}
+              >
+                Pay with PayPal
+              </button>
+
+              <button
+                className="alfalah-button"
+                onClick={() =>
+                  window.open("https://www.bankalfalah.com", "_blank")
+                }
+              >
+                Pay with Alfalah
               </button>
             </div>
           </motion.div>
